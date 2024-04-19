@@ -1,0 +1,4 @@
+
+Ipython:S1172;",Remove the unused function parameter "wait".(Ô”ØÍúÿÿÿÿ
+Npython:S1481d"1Replace unused local variable "ret_val" with "_".(ÜÏ˜şÿÿÿÿ
+kpython:S3776L"TRefactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.(œŸ²_
