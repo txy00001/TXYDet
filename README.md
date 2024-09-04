@@ -1,5 +1,5 @@
-
-# 基础环境
+# 此项目为实验总结，可做测试对比及改进，不用于商用
+## 基础环境
 Ubuntu20.04<br>
 PyTorch 1.13<br>
 Python 3.8<br>
@@ -9,7 +9,7 @@ backbone 支持 mobilenetv3、shufflenetv2、ghostnet、efficientnet，vovnet
 neck 支持 FPN,PAN、FPN_Slim，PAN_Slim、BiFPN
 head 支持 gfl、gfl v2(改进版)
 
-# txydet可选组式
+## txydet可选组式
 如：
 EfficientNet + BiFPN + GFL
 GhostNet + PAN + GFL
@@ -36,7 +36,7 @@ mosaic_area：GT bbox<该阈值则过滤掉
 可以从class txydetHead(GFLHead): # 在head里进行替换
 
 
-# GhostNet分为完整版和精简版
+## GhostNet分为官方版和简化版
 配置文件 
 ghostnet_full.yml 原始版
 ghostnet_slim.yml 轻量版
@@ -52,7 +52,7 @@ python tools/train.py config/txydet.yml
 ```
 python -m torch.distributed.launch --nproc_per_node=2 --master_port 30001 tools/train.py config/txydet.yml
 ```
-## Inference video
+### Inference video
 可用于演示<br>
 ```
 python ./demo/demo.py  'video' --path /media/ubuntu/data/1.mp4 --config config/efficientdet.yml --model ./workspace/efficientdet/model_best/model_best.pth
